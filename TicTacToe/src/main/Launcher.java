@@ -30,7 +30,7 @@ public class Launcher {
 		//Creating Player and with first player has first turn
 		for(int i=1;i<3;i++)
 		{
-			player=playerfactory.createPlayer("PLAYER "+i,i==1?true:false);
+			player=playerfactory.createPlayer("PLAYER"+i,i==1?true:false);
 		    Players.add(player);
 		}
 		do {

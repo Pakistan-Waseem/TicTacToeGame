@@ -22,10 +22,10 @@ public class PlayerFactory {
 		System.out.println("Please enter " + playernumber + " name");
 		scan = new Scanner(System.in);
 		Name = scan.nextLine();
-		System.out.println("Please enter game symbol for " + playernumber
+		/*System.out.println("Please enter game symbol for " + playernumber
 				+ "name");
-		Symbol = scan.nextLine();
-		return new Player(Name, Symbol.trim().charAt(0), status);
+		Symbol = scan.nextLine();Symbol.trim().charAt(0)*/
+		return new Player(Name,new PlayerItem(playernumber).getPlayerITem(), status);
 
 	}
 }

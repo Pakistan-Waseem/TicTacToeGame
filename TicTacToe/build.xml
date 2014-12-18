@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="new jar" name="TicTacToe Game">
+	<target name="new jar">
+		<jar destfile="TicTacToe/NewJar.jar">
+			<fileset dir="./bin"/>
+				<manifest>
+					<attribute name="Create Jar" value="main.Launcher" >
+					</attribute>
+				</manifest>
+		</jar>
+	</target>
+</project>
