@@ -28,4 +28,10 @@ public class Visualizer{
         System.out.println(  " \t\t ---|----|---" );
         System.out.println(  "\t\t" + BoardData [6]+ "   | " +BoardData [7]+ "  | " +BoardData [8]); 
 	}
+	//This method is used to clear screen upto fifty lines
+	public void clearScreen()
+	{
+		for(int i=1;i<50;i++)
+			System.out.println();
+	}
 }

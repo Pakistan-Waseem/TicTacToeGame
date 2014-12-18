@@ -161,11 +161,4 @@ import java.util.Scanner;
 		return result;
 
 	}
-	// Clear Screen
-	public void clearScreen()
-	{
-		for(int i=1;i<50;i++)
-			System.out.println();
-	}
-
 }

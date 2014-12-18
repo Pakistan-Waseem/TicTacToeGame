@@ -3,29 +3,29 @@
  */
 package player;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * @author waseem
  *
  */
-//Creating Player
+// Creating Player
 public class PlayerFactory {
 
-	public PlayerFactory() {
-	}
-
-	public static Player createPlayer(String playernumber, boolean status) {
+	public ArrayList<Player> createPlayers() {
 		String Name;
-		String Symbol;
 		Scanner scan;
-		System.out.println("Please enter " + playernumber + " name");
+		ArrayList<Player> Players = new ArrayList<Player>();
 		scan = new Scanner(System.in);
-		Name = scan.nextLine();
-		/*System.out.println("Please enter game symbol for " + playernumber
-				+ "name");
-		Symbol = scan.nextLine();Symbol.trim().charAt(0)*/
-		return new Player(Name,new PlayerItem(playernumber).getPlayerITem(), status);
-
+		for (int i = 1; i < 3; i++) {
+			System.out.println("Please enter PLAYER" + i + " name");
+			Name = scan.nextLine();
+			if(i==1)
+				Players.add(new PlayerX(Name,true));
+			else
+				Players.add(new PlayerO(Name,false));
+		}
+		return Players;
 	}
 }

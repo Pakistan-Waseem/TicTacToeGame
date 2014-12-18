@@ -26,24 +26,18 @@ public class Launcher {
 		PlayerFactory playerfactory=new PlayerFactory();
 		String ch;
 		Scanner scan;
-		Player player;
 		//Creating Player and with first player has first turn
-		for(int i=1;i<3;i++)
-		{
-			player=playerfactory.createPlayer("PLAYER"+i,i==1?true:false);
-		    Players.add(player);
-		}
+		Players=playerfactory.createPlayers();
 		do {
 			visualizer=new Visualizer();
 			simulator=Simulator.getSimulator(Players,visualizer);
 			simulator.StartGame();
-			simulator.clearScreen();
+			visualizer.clearScreen();
 			System.out.println(simulator.GameResult());
 			System.out.println("Would you like to play again (Enter 'yes')? ");
 			scan = new Scanner(System.in);
 			ch = scan.nextLine();
 		} while (ch.equals("yes"));
-       //Checking the GIT
 	}
 
 }
